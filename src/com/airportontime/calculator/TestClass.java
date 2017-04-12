@@ -17,5 +17,11 @@ public class TestClass {
         
         System.out.println(myETACalculator.getETA());
         
+        PassengerArrivalTimeCalculator passengerETACalculator = new FlightETACalculator();
+        passengerETACalculator = new BaggageETACalculator(passengerETACalculator);
+        passengerETACalculator = new PassengerMiscETACalculator(passengerETACalculator);
+        
+        System.out.println(passengerETACalculator.getETA());
+        
     }
 }

@@ -11,7 +11,7 @@ import com.airportontime.generic.Location;
  *
  * @author amitnandanp
  */
-public class WazeMapsFacade implements MapInterface {
+public class WazeMapsFacade implements ExternalAPIInterface {
     private Location source;
     private Location destination;
 

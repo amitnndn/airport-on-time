@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.airportontime.calculator;
-
+package com.airportontime.external;
 /**
  *
  * @author amitnandanp
  */
-interface ArrivalTimeCalculator {
-    public double getETA();
+interface ExternalAPIInterface {
+    public double getData();
+    public boolean isAvailable();
 }

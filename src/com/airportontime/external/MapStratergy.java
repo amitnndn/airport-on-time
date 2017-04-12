@@ -12,14 +12,14 @@ import com.airportontime.generic.Location;
  * @author amitnandanp
  */
 public class MapStratergy {
-    private MapInterface map;
+    private ExternalAPIInterface map;
     
     public double getETA(){
         map = this.returnAPI();
         return map.getData();
     }
     
-    public MapInterface returnAPI(){
+    public ExternalAPIInterface returnAPI(){
         GoogleMapsFacade googleMaps = new GoogleMapsFacade(new Location(2.5,5.2), new Location(2.5,5.2));
         WazeMapsFacade wazeMaps = new WazeMapsFacade(new Location(2.5,5.2), new Location(2.5,5.2));
         if(googleMaps.isAvailable()){

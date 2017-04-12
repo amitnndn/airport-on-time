@@ -20,7 +20,13 @@ public class TrafficETACalculator extends DriverArrivalTimeCalculator {
     public TrafficETACalculator() {
         map = new MapStratergy();
     }
-        
+
+    public TrafficETACalculator(Location source, Location destination) {
+        this.source = source;
+        this.destination = destination;
+        this.map = new MapStratergy();
+    }
+    
     public double getETA(){
         return map.getETA();
     }

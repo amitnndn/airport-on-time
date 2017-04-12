@@ -9,7 +9,15 @@ package com.airportontime.external;
  *
  * @author amitnandanp
  */
-interface MapInterface {
-    public double getData();
-    public boolean isAvailable();
+public class FlightDataCacheFacade implements ExternalAPIInterface {
+
+    @Override
+    public double getData() {
+        return 2.5;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return true;
+    }            
 }

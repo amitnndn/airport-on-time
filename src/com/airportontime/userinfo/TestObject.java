@@ -5,6 +5,7 @@
  */
 package com.airportontime.userinfo;
 
+import com.airportontime.calculator.TTLAndETACalculatorObservable;
 import com.airportontime.notification.NotificationFactory;
 import com.airportontime.notification.NotificationObserver;
 import com.airportontime.generic.Location;
@@ -27,11 +28,13 @@ public class TestObject {
         Itinerary itinerary;
         itinerary = new Itinerary(1, "04/12/2017", preferences, "DA101", "LAX", "MSP", user, location, "Fueling",10);
         
-        NotificationFactory notificationFactory = new NotificationFactory(itinerary);
+        NotificationObserver observer = new NotificationObserver(itinerary);
         
-        NotificationObserver notificationObserver = new NotificationObserver(notificationFactory);
+        TTLAndETACalculatorObservable calculator = new TTLAndETACalculatorObservable(itinerary);
         
-        notificationObserver.sendNotification();
+        calculator.attach(observer);
+        
+        calculator.calculateTTL();
         
     }
     

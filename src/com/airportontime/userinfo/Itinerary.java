@@ -49,4 +49,8 @@ public class Itinerary {
     public List<String> getNotificationPreferences() {
         return notificationPreferences;
     }
+    
+    public MiscStops getMiscStops() {
+        return miscStops;
+    }
 }

@@ -11,7 +11,7 @@ import com.airportontime.generic.Location;
  *
  * @author amitnandanp
  */
-public class GoogleMapsFacade implements MapInterface {
+public class GoogleMapsFacade implements ExternalAPIInterface {
     
     private Location source;
     private Location destination; 

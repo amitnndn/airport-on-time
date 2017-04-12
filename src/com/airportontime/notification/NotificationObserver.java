@@ -5,6 +5,7 @@
  */
 package com.airportontime.notification;
 
+import com.airportontime.userinfo.Itinerary;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class NotificationObserver {
     
     private List<Notification> notifications = new ArrayList<>();
     
-    public NotificationObserver(NotificationFactory notificationFactory) {
-        this.notificationFactory = notificationFactory;
+    public NotificationObserver(Itinerary itinerary) {
+        this.notificationFactory = new NotificationFactory(itinerary);
     }
     
     public void sendNotification(){
