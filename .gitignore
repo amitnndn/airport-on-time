@@ -1,4 +1,7 @@
 build/
 nbproject/
+.DS_Store*
+build.xml
+manifest.mf
 src/com/airportontime/calculator/TestClass.java
 src/com/airportontime/userinfo/TestObject.java
