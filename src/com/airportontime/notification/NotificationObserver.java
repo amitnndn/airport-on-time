@@ -20,7 +20,7 @@ public class NotificationObserver {
     private List<Notification> notifications = new ArrayList<>();
     
     public NotificationObserver(Itinerary itinerary) {
-        this.notificationFactory = new NotificationFactory(itinerary);
+        this.notificationFactory = NotificationFactory.getInstance(itinerary);
     }
     
     public void sendNotification(){

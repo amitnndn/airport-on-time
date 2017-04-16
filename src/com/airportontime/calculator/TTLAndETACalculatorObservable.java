@@ -27,7 +27,6 @@ public class TTLAndETACalculatorObservable {
         passengerETAFactory = new PassengerETACalculatorFactory(itinerary);        
     }
     
-    
     public void calculateTTL(){
         driverETA = driverETAFactory.factory();
         passengerETA = passengerETAFactory.factory();

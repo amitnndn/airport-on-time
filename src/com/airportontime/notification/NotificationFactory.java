@@ -14,10 +14,19 @@ import java.util.List;
  * @author amitnandanp
  */
 public class NotificationFactory {
+    private static NotificationFactory notificationFactory;
     private Itinerary itinerary;
     
-    public NotificationFactory(Itinerary itinerary) {
+    private NotificationFactory(Itinerary itinerary) {
         this.itinerary = itinerary;
+    }
+    
+    //Using lazy instantiation to get the instance of Notifications at runtime
+    public static NotificationFactory getInstance(Itinerary itinerary){
+        if(notificationFactory == null){
+            notificationFactory = new NotificationFactory(itinerary);
+        }
+        return notificationFactory;
     }
     
     public List<Notification> getNotifications() {
